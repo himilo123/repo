@@ -47,5 +47,6 @@ def himilo(var1,var2):
 
     return fig1,fig2
 
-app.run_server(0.0.0.0,debug=True)
+
+app.run_server(host='0.0.0.0' debug = True)
 server = app.server
