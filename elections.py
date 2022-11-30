@@ -47,6 +47,6 @@ def himilo(var1,var2):
 
     return fig1,fig2
 
-app.run(host='0.0.0.0' port=5000)
+app.run(host='0.0.0.0')
 
 server = app.server
