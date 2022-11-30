@@ -133,5 +133,5 @@ row10 = dbc.Row([fig28, fig29, fig30])
 row11 = dbc.Row([fig31, fig32, fig33])
 row12 = dbc.Row([fig34, fig35, fig36])
 app.layout = dbc.Container([title, row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12])
-app.run_server(port=4090)
+app.run_server(debug = True)
 server = app.server
