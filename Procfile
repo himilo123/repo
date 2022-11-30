@@ -1,1 +1,1 @@
-web:gunicorn himilo:app
+gunicorn elections:app
