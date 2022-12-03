@@ -77,4 +77,6 @@ row13 = dbc.Row([fig13])
 row14 = dbc.Row([fig14])
 app.layout = dbc.Container([title,row1,row2,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13,row14])
 
-app.run_server(port=4090)
+app.run(host='0.0.0.0')
+
+server = app.server
