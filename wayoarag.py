@@ -58,7 +58,7 @@ fig9 = dbc.Col(dcc.Graph(figure=fig9))
 fig10 = dbc.Col(dcc.Graph(figure=fig10))
 fig11 = dbc.Col(dcc.Graph(figure=fig11))
 fig12 = dbc.Col(dcc.Graph(figure=fig12))
-fig12 = dbc.Col(dcc.Graph(figure=fig13))
+fig13 = dbc.Col(dcc.Graph(figure=fig13))
 fig14 = dbc.Col(dcc.Graph(figure=fig14))
 
 row1 = dbc.Row([fig1])
