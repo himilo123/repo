@@ -1,6 +1,6 @@
-Ahmed_S,Salo,Abdishakur,Ali,Abdiraxman,Ahmed_C,Abshir,Mukhtar,Mustafe,M_Hassan,Idiris,Hamse,Baxraawi,Janaale
-Draw,Draw,Lost,Win,Draw,Draw,Win,Win,Lost,Lost,Lost,Draw,Lost,Lost
-Lost,Draw,Lost,Win,Win,Draw,Win,Lost,Lost,Win,Draw,Lost,Win,Win
-Lost,Draw,Draw,Win,Win,Draw,Win,Win,Draw,Win,Draw,Win,Lost,Lost
-Lost,Win,Win,Draw,Draw,Win,Lost,Lost,Draw,Win,Win,Lost,Draw,Win
-Lost,Lost,Lost,Draw,Draw,Lost,Lost,Win,Lost,Win,Win,Win,Draw,Lost
+Month,Ahmed_S,Ali,Salo,Baxraawi,Idiris,Mustafe,Mukhtar,Jiiro,Hamse,M_Hassan,Janaale,Abshir,Cabdiraxman,Ahmed_C
+1,LOST,WIN,LOST,WIN,WIN,WIN ,LOST,LOST,WIN,LOST,LOST,WIN,WIN,LOST
+2,WIN,WIN,WIN,LOST,WIN,LOST,WIN,LOST,WIN,LOST,LOST,LOST,LOST,WIN
+3,LOST,WIN,LOST,WIN,LOST,WIN ,LOST,WIN,WIN,LOST,WIN,LOST,LOST,WIN
+4,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW,DRAW
+5,WIN,LOST,WIN,LOST,WIN,LOST,LOST,WIN,LOST,WIN,LOST,LOST,WIN,LOST
