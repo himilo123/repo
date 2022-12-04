@@ -75,7 +75,7 @@ row11 = dbc.Row([fig11])
 row12 = dbc.Row([fig12])
 row13 = dbc.Row([fig13])
 row14 = dbc.Row([fig14])
-app.layout = dbc.Container([title,row1,row2,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13,row14])
+app.layout = dbc.Container([title,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13,row14])
 
 app.run(host='0.0.0.0')
 
