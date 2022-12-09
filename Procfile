@@ -1,1 +1,1 @@
-gunicorn wayoarag:app
+gunicorn regions:app
