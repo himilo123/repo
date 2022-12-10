@@ -68,4 +68,8 @@ row1 = dbc.Row([fig1, fig2, fig3])
 row2 = dbc.Row([fig4, fig5, fig6])
 
 app.layout = dbc.Container([title, row1, row2])
-app.run_server(port=4089)
+
+
+app.run(host='0.0.0.0')
+
+server = app.server
