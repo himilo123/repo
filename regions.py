@@ -19,15 +19,15 @@ app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
 title = html.H5("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
 
-with open(r'C:\Users\Admin\Desktop\SIDEBAR\json.txt') as j1:
+with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
 geojson1 = rewind(geojson1, rfc7946=False)
 
-with open(r'C:\Users\Admin\Desktop\SIDEBAR\sml.txt') as j2:
+with open(r'json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'C:\Users\Admin\Desktop\SIDEBAR\fips1.csv')
+df1 = pd.read_csv(r'regions-district.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
@@ -91,7 +91,6 @@ def himilo(var1):
 
     return fig1, fig2, fig3, fig4, fig5, fig6
 
-
-app.run(port=4098)
+app.run(host='0.0.0.0')
 
 server = app.server
