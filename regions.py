@@ -38,13 +38,13 @@ df1 = pd.read_csv(r'regions-district.csv')
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
 
-output1 = dbc.Col(dcc.Graph(id='myfig1', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
-output2 = dbc.Col(dcc.Graph(id='myfig2', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
-output3 = dbc.Col(dcc.Graph(id='myfig3', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
-output4 = dbc.Col(dcc.Graph(id='myfig4', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
-output5 = dbc.Col(dcc.Graph(id='myfig5', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
-output6 = dbc.Col(dcc.Graph(id='myfig6', figure={}),xs=10, sm=10, md=10, lg=4, xl=4)
 
+output1 = dbc.Col(dcc.Graph(id='myfig1', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
+output2 = dbc.Col(dcc.Graph(id='myfig2', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
+output3 = dbc.Col(dcc.Graph(id='myfig3', figure={}),xs=12, sm=12, md=10, lg=4, xl=4)
+output4 = dbc.Col(dcc.Graph(id='myfig4', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
+output5 = dbc.Col(dcc.Graph(id='myfig5', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
+output6 = dbc.Col(dcc.Graph(id='myfig6', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
 # row1 = [input1, style={'textAlign': 'center'}]
 
 row1 = html.H6(["Select The Year", input1], style={'textAlign': 'center'})
