@@ -15,7 +15,7 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Output, Input
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP],meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],)
 header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
 title = html.H5("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
 
