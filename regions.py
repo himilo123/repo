@@ -19,7 +19,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     meta_tags=[
         {"name": "viewport",
-         "content": "width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.5"}
+         "content": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"}
     ],
 )
 header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
