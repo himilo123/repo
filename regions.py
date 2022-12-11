@@ -51,7 +51,7 @@ row1 = html.H6(["Select The Year", input1], style={'textAlign': 'center'})
 row2 = dbc.Row([output1, output2, output3])
 row3 = dbc.Row([output4, output5, output6])
 
-app.layout = dbc.Container([title, row1, row2, row3])
+app.layout = dbc.Container([header,title, row1, row2, row3])
 
 
 @app.callback(
@@ -69,31 +69,43 @@ def himilo(var1):
     fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye_Vote%', featureidkey="properties.name",
                          title='Kulmiye Votes% Regional Level')
     fig1.update_geos(fitbounds="locations", visible=False)
+    fig1.update_xaxes(fixedrange=True)
+    fig1.update_yaxes(fixedrange=True)
 
     dff = df1[(df1["Year"] == var1)]
     fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani_Vote%', featureidkey="properties.name",
                          title='Wadani Votes% Regional Level')
     fig2.update_geos(fitbounds="locations", visible=False)
+    fig2.update_xaxes(fixedrange=True)
+    fig2.update_yaxes(fixedrange=True)
 
     dff = df1[(df1["Year"] == var1)]
     fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid_Vote%', featureidkey="properties.name",
                          title='Ucid Votes% Regional Level')
     fig3.update_geos(fitbounds="locations", visible=False)
+    fig3.update_xaxes(fixedrange=True)
+    fig3.update_yaxes(fixedrange=True)
 
     dff = df1[(df1["Year"] == var1)]
     fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='Kulmiye', featureidkey="properties.name",
                          title='Kulmiye Votes% District Level')
     fig4.update_geos(fitbounds="locations", visible=False)
+    fig4.update_xaxes(fixedrange=True)
+    fig4.update_yaxes(fixedrange=True)
 
     dff = df1[(df1["Year"] == var1)]
     fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='Wadani', featureidkey="properties.name",
                          title='Wadani Votes% District Level')
     fig5.update_geos(fitbounds="locations", visible=False)
+    fig5.update_xaxes(fixedrange=True)
+    fig5.update_yaxes(fixedrange=True)
 
     dff = df1[(df1["Year"] == var1)]
     fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='Ucid', featureidkey="properties.name",
                          title='Ucid Votes% District Level')
     fig6.update_geos(fitbounds="locations", visible=False)
+    fig6.update_xaxes(fixedrange=True)
+    fig6.update_yaxes(fixedrange=True)
 
     return fig1, fig2, fig3, fig4, fig5, fig6
 
