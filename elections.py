@@ -26,8 +26,8 @@ input1 = dbc.Col(dcc.Dropdown(id='drop1', options=[{'label': x, 'value': x} for 
 input2 = dbc.Col(dcc.Dropdown(id='drop2', options=[{'label': x, 'value': x} for x in df['Region'].unique()],
                             value="Awdal"))
 
-output1 = dbc.Col(dcc.Graph(id='myfig1', figure={}))
-output2 = dbc.Col(dcc.Graph(id='myfig2', figure={}))
+output1 = dbc.Col(dcc.Graph(id='myfig1', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
+output2 = dbc.Col(dcc.Graph(id='myfig2', figure={}),xs=12, sm=12, md=12, lg=4, xl=4)
 
 
 row1 = dbc.Row([input1,input2])
