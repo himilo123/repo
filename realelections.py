@@ -61,41 +61,42 @@ app.layout = dbc.Container([header,title, row1, row2, row3])
 )
 def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
-    fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye', featureidkey="properties.name",
+    fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye', featureidkey="properties.name",range_color=(0, 8),
                          title='Kulmiye Parliment Seats')
     fig1.update_geos(fitbounds="locations", visible=False)
     fig1.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani', featureidkey="properties.name",
+    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani', featureidkey="properties.name",range_color=(0, 8),
                          title='Wadani Parliment Seats')
     fig2.update_geos(fitbounds="locations", visible=False)
     fig2.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid', featureidkey="properties.name",
+    fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid', featureidkey="properties.name",range_color=(0, 8),
                          title='Ucid Parliment Seats')
     fig3.update_geos(fitbounds="locations", visible=False)
     fig3.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='kulmiye', featureidkey="properties.name",
+    fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='kulmiye', featureidkey="properties.name",range_color=(0, 7),
                          title='Kulmiye Municiplity Seats')
     fig4.update_geos(fitbounds="locations", visible=False)
     fig4.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='wadani', featureidkey="properties.name",
+    fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='wadani', featureidkey="properties.name",range_color=(0, 7),
                          title='Wadani Municiplity Seats')
     fig5.update_geos(fitbounds="locations", visible=False)
     fig5.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='ucid', featureidkey="properties.name",
+    fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='ucid', featureidkey="properties.name",range_color=(0, 7),
                          title='Ucid Municiplity Seats')
     fig6.update_geos(fitbounds="locations", visible=False)
     fig6.layout.update(dragmode=False)
 
+    
     return fig1, fig2, fig3, fig4, fig5, fig6
 
 
