@@ -62,46 +62,43 @@ app.layout = dbc.Container([header,title, row1, row2, row3])
 def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
     fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye%', featureidkey="properties.name",range_color=(20, 40),
-                         title='Kulmiye Parliment Seats', hover_data=["Total-Seats","Kulmiye", "Kulmiye%"])
+                         title='Kulmiye Parliment Seats', hover_data=["Total","Kulmiye", "Kulmiye%"])
     fig1.update_geos(fitbounds="locations", visible=False)
     fig1.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     dff = df1[(df1["Year"] == var1)]
     fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani%', featureidkey="properties.name",range_color=(20, 40),
-                         title='Wadani Parliment Seats', hover_data=["Total-Seats","Wadani", "Wadani%"])
+                         title='Wadani Parliment Seats', hover_data=["Total","Wadani", "Wadani%"])
     fig2.update_geos(fitbounds="locations", visible=False)
     fig2.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     dff = df1[(df1["Year"] == var1)]
     fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid%', featureidkey="properties.name",range_color=(20, 40),
-                         title='Ucid Parliment Seats', hover_data=["Total-Seats","Ucid", "Ucid%"])
+                         title='Ucid Parliment Seats', hover_data=["Total","Ucid", "Ucid%"])
     fig3.update_geos(fitbounds="locations", visible=False)
     fig3.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     dff = df1[(df1["Year"] == var1)]
     fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='kulmiye%', featureidkey="properties.name",range_color=(0, 50),
-                         title='Kulmiye Municiplity Seats', hover_data=["total-seats","kulmiye", "kulmiye%"])
+                         title='Kulmiye Municiplity Seats', hover_data=["total","kulmiye", "kulmiye%"])
     fig4.update_geos(fitbounds="locations", visible=False)
     fig4.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     dff = df1[(df1["Year"] == var1)]
     fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='wadani%', featureidkey="properties.name",range_color=(0, 50),
-                         title='Wadani Municiplity Seats', hover_data=["total-seats","wadani", "wadani%"])
+                         title='Wadani Municiplity Seats', hover_data=["total","wadani", "wadani%"])
     fig5.update_geos(fitbounds="locations", visible=False)
     fig5.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     dff = df1[(df1["Year"] == var1)]
     fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='ucid%', featureidkey="properties.name",range_color=(0, 50),
-                         title='Ucid Municiplity Seats', hover_data=["total-seats","ucid", "ucid%"])
+                         title='Ucid Municiplity Seats', hover_data=["total","ucid", "ucid%"])
     fig6.update_geos(fitbounds="locations", visible=False)
     fig6.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     return fig1, fig2, fig3, fig4, fig5, fig6
 
 
-app.run(port=4011)
-
-server = app.server
 
 
 
