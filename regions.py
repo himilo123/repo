@@ -73,8 +73,7 @@ def himilo(var1):
 
 
     dff = df1[(df1["Year"] == var1)]
-    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani_Regional_Seats
-%', featureidkey="properties.name",
+    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani_Regional_Seats%', featureidkey="properties.name",
                          title='Wadani Votes% Regional Level')
     fig2.update_geos(fitbounds="locations", visible=False)
     fig2.layout.update(dragmode=False)
