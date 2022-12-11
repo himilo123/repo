@@ -1,1 +1,1 @@
-gunicorn regions:app
+gunicorn elections:app
