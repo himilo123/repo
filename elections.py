@@ -20,15 +20,15 @@ app = dash.Dash(
 header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
 title = html.H5("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
 
-with open(r'json-sml-regions.txt') as j1:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
 geojson1 = rewind(geojson1, rfc7946=False)
 
-with open(r'json-sml-districts.txt') as j2:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'realelectons.csv')
+df1 = pd.read_csv(r'C:\Users\Admin\Desktop\SIDEBAR\realelectons.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
@@ -46,7 +46,7 @@ row1 = html.H6(["Select The Year", input1], style={'textAlign': 'center'})
 row2 = dbc.Row([output1, output2, output3])
 row3 = dbc.Row([output4, output5, output6])
 
-app.layout = dbc.Container([header,title, row1, row2, row3])
+app.layout = dbc.Container([title, row1, row2, row3])
 
 
 @app.callback(
@@ -61,42 +61,33 @@ app.layout = dbc.Container([header,title, row1, row2, row3])
 )
 def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
-    fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye', featureidkey="properties.name",
+    fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye', featureidkey="properties.name",range_color=(0, 8),
                          title='Kulmiye Parliment Seats')
     fig1.update_geos(fitbounds="locations", visible=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani', featureidkey="properties.name",
+    fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani', featureidkey="properties.name",range_color=(0, 8),
                          title='Wadani Parliment Seats')
     fig2.update_geos(fitbounds="locations", visible=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid', featureidkey="properties.name",
+    fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid', featureidkey="properties.name",range_color=(0, 8),
                          title='Ucid Parliment Seats')
     fig3.update_geos(fitbounds="locations", visible=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='kulmiye', featureidkey="properties.name",
+    fig4 = px.choropleth(dff, geojson=geojson2, locations='name', color='kulmiye', featureidkey="properties.name",range_color=(0, 7),
                          title='Kulmiye Municiplity Seats')
     fig4.update_geos(fitbounds="locations", visible=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='wadani', featureidkey="properties.name",
+    fig5 = px.choropleth(dff, geojson=geojson2, locations='name', color='wadani', featureidkey="properties.name",range_color=(0, 7),
                          title='Wadani Municiplity Seats')
     fig5.update_geos(fitbounds="locations", visible=False)
 
     dff = df1[(df1["Year"] == var1)]
-    fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='ucid', featureidkey="properties.name",
+    fig6 = px.choropleth(dff, geojson=geojson2, locations='name', color='ucid', featureidkey="properties.name",range_color=(0, 7),
                          title='Ucid Municiplity Seats')
     fig6.update_geos(fitbounds="locations", visible=False)
 
     return fig1, fig2, fig3, fig4, fig5, fig6
-
-
-app.run(port=4011)
-
-server = app.server
-
-app.run(host='0.0.0.0')
-
-server = app.server
