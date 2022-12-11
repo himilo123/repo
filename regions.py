@@ -25,15 +25,15 @@ app = dash.Dash(
 header = html.H5("Himilo Data Solutions & Research", style={'textAlign': 'center'})
 title = html.H6("Somaliland Eelections Sample Data", style={'textAlign': 'center'})
 
-with open(r'json-sml-regions.txt') as j1:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
 geojson1 = rewind(geojson1, rfc7946=False)
 
-with open(r'json-sml-districts.txt') as j2:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'regions-district.csv')
+df1 = pd.read_csv(r'C:\Users\Admin\Desktop\SIDEBAR\regions-district.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
@@ -62,7 +62,6 @@ app.layout = dbc.Container([header,title, row1, row2, row3])
     Output(component_id="myfig5", component_property='figure'),
     Output(component_id="myfig6", component_property='figure'),
     Input(component_id='drop1', component_property='value'),
-
 )
 def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
@@ -104,6 +103,6 @@ def himilo(var1):
 
     return fig1, fig2, fig3, fig4, fig5, fig6
 
-app.run(host='0.0.0.0')
+app.run(port = 3091)
 
 server = app.server
