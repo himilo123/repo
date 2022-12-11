@@ -62,19 +62,19 @@ app.layout = dbc.Container([header,title, row1, row2, row3])
 def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
     fig1 = px.choropleth(dff, geojson=geojson1, locations='name', color='Kulmiye', featureidkey="properties.name",range_color=(0, 8),
-                         title='Kulmiye Parliment Seats')
+                         title='Kulmiye Parlaiment Seats')
     fig1.update_geos(fitbounds="locations", visible=False)
     fig1.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
     fig2 = px.choropleth(dff, geojson=geojson1, locations='name', color='Wadani', featureidkey="properties.name",range_color=(0, 8),
-                         title='Wadani Parliment Seats')
+                         title='Wadani Parlaiment Seats')
     fig2.update_geos(fitbounds="locations", visible=False)
     fig2.layout.update(dragmode=False)
 
     dff = df1[(df1["Year"] == var1)]
     fig3 = px.choropleth(dff, geojson=geojson1, locations='name', color='Ucid', featureidkey="properties.name",range_color=(0, 8),
-                         title='Ucid Parliment Seats')
+                         title='Ucid Parlaiment Seats')
     fig3.update_geos(fitbounds="locations", visible=False)
     fig3.layout.update(dragmode=False)
 
