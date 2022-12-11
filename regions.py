@@ -23,7 +23,7 @@ app = dash.Dash(
     ],
 )
 header = html.H5("Himilo Data Solutions & Research", style={'textAlign': 'center'})
-title = html.H6("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
+title = html.H6("Somaliland Polotical Parties voting analysis", style={'textAlign': 'center'})
 
 with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
