@@ -17,18 +17,18 @@ from dash.dependencies import Output, Input
 
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP])
-header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
-title = html.H5("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
+header = html.H2("Himilo Data Solutions & Research Center", style={'textAlign': 'center'})
+title = html.H5("Somaliland Parlmenetery and Municiplity Voting  Analysis", style={'textAlign': 'center'})
 
-with open(r'json-sml-regions.txt') as j1:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
 geojson1 = rewind(geojson1, rfc7946=False)
 
-with open(r'json-sml-districts.txt') as j2:
+with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'realelectons.csv')
+df1 = pd.read_csv(r'C:\Users\Admin\Desktop\SIDEBAR\realelectons.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
@@ -42,11 +42,11 @@ output6 = dbc.Col(dcc.Graph(id='myfig6', figure={}),xs=12, sm=12, md=12, lg=4, x
 
 # row1 = [input1, style={'textAlign': 'center'}]
 
-row1 = html.H6(["Select The Year", input1], style={'textAlign': 'center'})
+row1 = html.H6([ input1], style={'textAlign': 'center'})
 row2 = dbc.Row([output1, output2, output3])
 row3 = dbc.Row([output4, output5, output6])
 
-app.layout = dbc.Container([title, row1, row2, row3])
+app.layout = dbc.Container([header,title, row1, row2, row3])
 
 
 @app.callback(
@@ -91,6 +91,8 @@ def himilo(var1):
     fig6.update_geos(fitbounds="locations", visible=False)
 
     return fig1, fig2, fig3, fig4, fig5, fig6
+
+
 
 
 app.run(host='0.0.0.0')
