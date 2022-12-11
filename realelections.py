@@ -20,15 +20,15 @@ app = dash.Dash(
 header = html.H2("Himilo Data Solutions & Research Center", style={'textAlign': 'center'})
 title = html.H5("Somaliland Parlmenetery and Municiplity Voting  Analysis", style={'textAlign': 'center'})
 
-with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-regions.txt') as j1:
+with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
 geojson1 = rewind(geojson1, rfc7946=False)
 
-with open(r'C:\Users\Admin\Desktop\SIDEBAR\json-sml-districts.txt') as j2:
+with open(r'json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'C:\Users\Admin\Desktop\SIDEBAR\realelectons.csv')
+df1 = pd.read_csv(r'realelectons.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
