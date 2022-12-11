@@ -22,8 +22,8 @@ app = dash.Dash(
          "content": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"}
     ],
 )
-header = html.H2("Himilo Data Solutions & Research", style={'textAlign': 'center'})
-title = html.H5("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
+header = html.H5("Himilo Data Solutions & Research", style={'textAlign': 'center'})
+title = html.H6("Somaliland Polotical Parties voting pool analysis", style={'textAlign': 'center'})
 
 with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
