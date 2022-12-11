@@ -16,10 +16,10 @@ from dash import html
 from dash.dependencies import Output, Input
 
 app = dash.Dash(
-    external_stylesheets=[dbc.themes.CYBORG],
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
     meta_tags=[
         {"name": "viewport",
-         "content": "width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=0.5"}
+         "content": "width=device-width, initial-scale=1.2, maximum-scale=2, minimum-scale=0.5"}
     ],
 )
 header = html.H5("Himilo Data Solutions & Research", style={'textAlign': 'center'})
