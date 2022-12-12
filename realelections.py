@@ -18,7 +18,7 @@ from dash.dependencies import Output, Input
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP])
 header = html.H2("Himilo Data Solutions & Research Center", style={'textAlign': 'center'})
-title = html.H5("Somaliland Parlmenetery and Municiplity Voting  Analysis", style={'textAlign': 'center'})
+title = html.H5("Somaliland Parliamentary and Municipality Voting  Analysis", style={'textAlign': 'center'})
 
 with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
