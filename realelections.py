@@ -19,9 +19,9 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP])
 header = html.H2("Himilo Data Solutions & Research Center", style={'textAlign': 'center'})
 title = html.H5("Somaliland Parliamentary and Municipality Voting  Analysis", style={'textAlign': 'center'})
-head1= html.P("Labadan sawir ee sare waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii isku sidkanaa ee  golayaasha degaanka iyo wakiilada ee Somaliland 2021 eyadoo gobol kasta iyo kasta  la siiyay cida ka heshay kuraasta ugu badam.")
-head2= html.P("Saddexdan  sawir ee sare waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golaha wakiilada ee Somaliland 2021 eyadii la tiranayo tirade kuraasta oo loo bedelay boqolay.")
-head3= html.P("Saddexdan  sawir ee sare eyagu  waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golayaasha degaanka  ee Somaliland 2021 eyadii la tiranayo tirade kuraasta oo loo bedelay boqolay.")
+head1= html.P("Labadan sawir ee hoose waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii isku sidkanaa ee  golayaasha degaanka iyo wakiilada ee Somaliland 2021 eyadoo gobol  iyo degmo kasta  la siiyay cida ka heshay kuraasta ugu badan.")
+head2= html.P("Saddexdan  sawir ee hoose waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golaha wakiilada ee Somaliland 2021 eyadoo la tiranayo tirade kuraasta oo loo bedelay boqolay.")
+head3= html.P("Saddexdan  sawir ee hoose eyagu  waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golayaasha degaanka  ee Somaliland 2021 eyadoo la tiranayo tirade kuraasta oo loo bedelay boqolay.")
 
 with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
