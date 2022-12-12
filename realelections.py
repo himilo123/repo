@@ -19,6 +19,9 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP])
 header = html.H2("Himilo Data Solutions & Research Center", style={'textAlign': 'center'})
 title = html.H5("Somaliland Parliamentary and Municipality Voting  Analysis", style={'textAlign': 'center'})
+head1= html.P("Labadan sawir ee sare waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii isku sidkanaa ee  golayaasha degaanka iyo wakiilada ee Somaliland 2021 eyadoo gobol kasta iyo kasta  la siiyay cida ka heshay kuraasta ugu badam.")
+head2= html.P("Saddexdan  sawir ee sare waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golaha wakiilada ee Somaliland 2021 eyadii la tiranayo tirade kuraasta oo loo bedelay boqolay.")
+head3= html.P("Saddexdan  sawir ee sare eyagu  waxay miijinayaan sidaa looga kala guulayastay doorashooyinkii ee  golayaasha degaanka  ee Somaliland 2021 eyadii la tiranayo tirade kuraasta oo loo bedelay boqolay.")
 
 with open(r'json-sml-regions.txt') as j1:
     geojson1 = json.load(j1)
@@ -48,7 +51,7 @@ row1 = html.H6([ input1], style={'textAlign': 'center'})
 row2 = dbc.Row([output1, output2, output3])
 row3 = dbc.Row([output4, output5, output6])
 row4 = dbc.Row([output7, output8])
-app.layout = dbc.Container([header,title,row4, row1, row2, row3])
+app.layout = dbc.Container([header,title,head1,row4, head2,row1,row2, head3,row3])
 
 
 @app.callback(
