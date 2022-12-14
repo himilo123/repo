@@ -91,3 +91,7 @@ def himilo(var1):
     fig6.update_geos(fitbounds="locations", visible=False)
 
     return fig1, fig2, fig3, fig4, fig5, fig6
+
+app.run(host='0.0.0.0')
+#app.run(port = 4060)
+server = app.server
