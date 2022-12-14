@@ -9,7 +9,7 @@ import pandas as pd
 from dash import Input, Output, html, dcc
 import dash_bootstrap_components as dbc
 
-app = dash.Dash(external_stylesheets=[dbc.themes.QUARTZ])
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 title = html.H1("Wayoarag-Statistics", style={'textAlign': 'center'})
 
 df= pd.read_csv(r'wayoarag.csv')
@@ -30,20 +30,34 @@ Baxraawi = pd.DataFrame(df['Baxraawi'].value_counts(normalize=True) * 100).reset
 Janaale = pd.DataFrame(df['Janaale'].value_counts(normalize=True) * 100).reset_index()
 
 
-fig1 = px.pie(Ahmed_S, values='Ahmed_S', names='index', title='Ahmed_S ')
-fig2 = px.pie(Salo, values='Salo', names='index', title='Salo ')
-fig3 = px.pie(Abdishakur, values='Abdishakur', names='index', title='Abdishakur ')
-fig4 = px.pie(Ali, values='Ali', names='index', title='Ali ')
-fig5 = px.pie(Abdiraxman, values='Abdiraxman', names='index', title='Abdiraxman ')
-fig6 = px.pie(Ahmed_C, values='Ahmed_C', names='index', title='Ahmed_C ')
-fig7 = px.pie(Abshir, values='Abshir', names='index', title='Abshir ')
-fig8 = px.pie(Mukhtar, values='Mukhtar', names='index', title='Mukhtar ')
-fig9 = px.pie(Mustafe, values='Mustafe', names='index', title='Mustafe ')
-fig10 = px.pie(Idiris, values='Idiris', names='index', title='Idiris ')
-fig11 = px.pie(Hamse, values='Hamse', names='index', title='Hamse ')
-fig12 = px.pie(Baxraawi, values='Baxraawi', names='index', title='Baxraawi')
-fig13 = px.pie(M_Hassan, values='M_Hassan', names='index', title='M_Hassan')
-fig14 = px.pie(Janaale, values='Janaale', names='index', title='Janaale')
+fig1 = px.pie(Ahmed_S, values='Ahmed_S', names='index', title='Ahmed_S ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig2 = px.pie(Salo, values='Salo', names='index', title='Salo ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig3 = px.pie(Abdishakur, values='Abdishakur', names='index', title='Abdishakur ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig4 = px.pie(Ali, values='Ali', names='index', title='Ali ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig5 = px.pie(Abdiraxman, values='Abdiraxman', names='index', title='Abdiraxman ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig6 = px.pie(Ahmed_C, values='Ahmed_C', names='index', title='Ahmed_C ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig7 = px.pie(Abshir, values='Abshir', names='index', title='Abshir ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig8 = px.pie(Mukhtar, values='Mukhtar', names='index', title='Mukhtar ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig9 = px.pie(Mustafe, values='Mustafe', names='index', title='Mustafe ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig10 = px.pie(Idiris, values='Idiris', names='index', title='Idiris ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig11 = px.pie(Hamse, values='Hamse', names='index', title='Hamse ',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig12 = px.pie(Baxraawi, values='Baxraawi', names='index', title='Baxraawi',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig13 = px.pie(M_Hassan, values='M_Hassan', names='index', title='M_Hassan',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
+fig14 = px.pie(Janaale, values='Janaale', names='index', title='Janaale',color = 'index',hole=0.5,color_discrete_map=
+        {'WIN':'green','LOST':'red','DRAW':'blue'})
 
 
 fig1 = dbc.Col(dcc.Graph(figure=fig1))
@@ -78,5 +92,5 @@ row14 = dbc.Row([fig14])
 app.layout = dbc.Container([title,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13,row14])
 
 app.run(host='0.0.0.0')
-
+#app.run(port = 5011)
 server = app.server
