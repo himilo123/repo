@@ -108,16 +108,19 @@ def himilo(var1):
     fig6.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     fig6.layout.update(dragmode=False)
     
-    fig7 = px.choropleth(dff, geojson=geojson1, locations='name', color='Won', featureidkey="properties.name",range_color=(20, 40),
-                         title='Kulmiye Parliment Seats', color_continuous_scale="Viridis",hover_data=["Total","Kulmiye", "Kulmiye%"])
+    fig7 = px.choropleth(dff, geojson=geojson1, locations='name', color='Won', featureidkey="properties.name",color_discrete_map=
+        {'Kulmiye':'yellow','Wadani':'OrangeRed','Neutral':'blue','No-Elections':'red'},
+                         title='Kulmiye Parliment Seats', color_continuous_scale="Viridis",hover_data=["Total","Kulmiye", "Wadani","Ucid"])
     fig7.update_geos(fitbounds="locations", visible=False)
     fig7.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     fig7.layout.update(dragmode=False)
 
     
     dff = df1[(df1["Year"] == var1)]
-    fig8 = px.choropleth(dff, geojson=geojson2, locations='name', color='won', featureidkey="properties.name",range_color=(0, 50),
-                         title='Kulmiye Municiplity Seats', color_continuous_scale="Viridis",hover_data=["total","kulmiye", "kulmiye%"])
+    fig8 = px.choropleth(dff, geojson=geojson2, locations='name', color='won',
+                         featureidkey="properties.name",color_discrete_map=
+        {'kulmiye':'yellow','wadani':'OrangeRed','Neutral':'blue','No-Elections':'red'},
+                         title='Kulmiye Municiplity Seats', color_continuous_scale="Viridis",hover_data=["total","kulmiye","wadani","ucid"])
     fig8.update_geos(fitbounds="locations", visible=False)
     fig8.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     fig8.layout.update(dragmode=False)
@@ -126,5 +129,5 @@ def himilo(var1):
     return fig1, fig2, fig3, fig4, fig5, fig6,fig7,fig8
 
 app.run(host='0.0.0.0')
-#app.run(port = 4060)
+#app.run(port = 4061)
 server = app.server
