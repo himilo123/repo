@@ -28,7 +28,7 @@ with open(r'json-sml-districts.txt') as j2:
     geojson2 = json.load(j2)
 geojson2 = rewind(geojson2, rfc7946=False)
 
-df1 = pd.read_csv(r'\realelectons.csv')
+df1 = pd.read_csv(r'realelectons.csv')
 
 input1 = dbc.Col(dcc.RadioItems(id='drop1', options=[{'label': x, 'value': x} for x in df1['Year'].unique()],
                                 value=2021))
