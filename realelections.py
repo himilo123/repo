@@ -109,7 +109,7 @@ def himilo(var1):
     fig6.layout.update(dragmode=False)
     
     fig7 = px.choropleth(dff, geojson=geojson1, locations='name', color='Won', featureidkey="properties.name",color_discrete_map=
-        {'Kulmiye':'yellow','Wadani':'OrangeRed','Neutral':'blue','No-Elections':'black'},
+        {'Kulmiye':'yellow','Wadani':'tiger','Neutral':'blue','No-Elections':'black'},
                          title='Kulmiye Parliment Seats', color_continuous_scale="Viridis",hover_data=["Total","Kulmiye", "Wadani","Ucid"])
     fig7.update_geos(fitbounds="locations", visible=False)
     fig7.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
