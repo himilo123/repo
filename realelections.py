@@ -119,7 +119,7 @@ def himilo(var1):
     dff = df1[(df1["Year"] == var1)]
     fig8 = px.choropleth(dff, geojson=geojson2, locations='name', color='won',
                          featureidkey="properties.name",color_discrete_map=
-        {'kulmiye':'yellow','wadani':'OrangeRed','Neutral':'blue','No-Elections':'black'},
+        {'kulmiye':'yellow','wadani':'orange','Neutral':'blue','No-Elections':'black'},
                          title='Kulmiye Municiplity Seats', color_continuous_scale="Viridis",hover_data=["total","kulmiye","wadani","ucid"])
     fig8.update_geos(fitbounds="locations", visible=False)
     fig8.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
