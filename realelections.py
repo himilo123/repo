@@ -51,7 +51,7 @@ row1 = html.H6([ input1], style={'textAlign': 'center'})
 row2 = dbc.Row([output1, output2, output3])
 row3 = dbc.Row([output4, output5, output6])
 row4 = dbc.Row([output7, output8])
-app.layout = dbc.Container([header,title,head1,row4, head2,row1,row2, head3,row3])
+app.layout = dbc.Container([header,title,row4,row1,row2,row3])
 
 
 @app.callback(
