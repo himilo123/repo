@@ -42,7 +42,7 @@ fig5 = px.pie(Abdiraxman, values='Abdiraxman', names='index', title='Abdiraxman 
         {'WIN':'green','LOST':'red','DRAW':'blue'})
 fig6 = px.pie(Ahmed_C, values='Ahmed_C', names='index', title='Ahmed_C ',color = 'index',hole=0.5,color_discrete_map=
         {'WIN':'green','LOST':'red','DRAW':'blue'})
-fig7 = px.pie(Abshir, values='Abshir', names='index', title='Abshir ',color = 'index',hole=0.5,color_discrete_map=
+fig7 = px.pie(Abshir, values='Abshir', names='index', title='Ahmed_Bedel ',color = 'index',hole=0.5,color_discrete_map=
         {'WIN':'green','LOST':'red','DRAW':'blue'})
 fig8 = px.pie(Mukhtar, values='Mukhtar', names='index', title='Mukhtar ',color = 'index',hole=0.5,color_discrete_map=
         {'WIN':'green','LOST':'red','DRAW':'blue'})
